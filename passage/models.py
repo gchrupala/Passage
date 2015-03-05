@@ -44,7 +44,7 @@ class RNN(object):
         self.y_tr = self.layers[-1].output(dropout_active=True)
         self.y_te = self.layers[-1].output(dropout_active=False)
         self.Y = Y
-
+                                     
         cost = self.cost(self.Y, self.y_tr)
         self.updates = self.updater.get_updates(self.params, cost)
 
