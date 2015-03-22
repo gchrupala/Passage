@@ -1,12 +1,13 @@
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages    
 
 setup(
     name='passage', 
-    version='0.2',
+    version='0.2.4',
     packages=find_packages(),
     description="""
         A little library for text analysis with RNNs.
     """,
+    long_description=open('README.rst').read(),
     license="MIT License (See LICENSE)",
     url="https://github.com/IndicoDataSolutions/Passage",
     author="Alec Radford, Madison May",
