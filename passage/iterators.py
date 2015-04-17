@@ -63,7 +63,7 @@ class SortedPadded(object):
             x_chunk = [x_chunk[idx] for idx in sort]
             y_chunk = [y_chunk[idx] for idx in sort]
             mb_chunks = [[x_chunk[idx:idx+self.size], y_chunk[idx:idx+self.size]] for idx in range(len(x_chunk))[::self.size]]
-            mb_chunks = shuffle(mb_chunks)
+            #mb_chunks = shuffle(mb_chunks)
             for xmb, ymb in mb_chunks:
                 xmb = padded(xmb)
                 yield self.x_dtype(xmb), self.y_dtype(ymb)  
