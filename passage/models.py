@@ -49,6 +49,7 @@ class RNN(object):
         self.updates = self.updater.get_updates(self.params, cost)
 
         self._train = theano.function([self.X, self.Y], cost, updates=self.updates)
+        self._params = theano.function([], self.params[0])
         self._cost = theano.function([self.X, self.Y], cost)
         self._predict = theano.function([self.X], self.y_te)
 
